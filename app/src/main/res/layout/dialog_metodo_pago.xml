@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/peymethod">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Cambio de método de pago"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="385dp"
+        android:layout_height="488dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <RadioButton
+            android:id="@+id/rbEfectivo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Efectivo"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbTarjeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tarjeta Débito"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbCC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transferencia Call Center"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbDE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transferencia DermaExpress"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbTA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transferencia Alicia"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbTK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transferencia Kueski"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbMP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transferencia Mercado Pago"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbOP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transferencia OpenPay"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbPP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transferencia PayPal"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbTC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tarjeta de crédito"
+            android:textColor="@color/white" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnAceptar"
+        android:layout_width="184dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="16dp"
+        android:text="Aceptar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.837"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+</androidx.constraintlayout.widget.ConstraintLayout>

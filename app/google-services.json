@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "275265618126",
+    "project_id": "entregasdm-d43c9",
+    "storage_bucket": "entregasdm-d43c9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275265618126:android:c1521282c2db0bea25d09f",
+        "android_client_info": {
+          "package_name": "com.consulsoftware.entregas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPW85msZPz9RPHbtdzhlw15lyoP_k9X6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
