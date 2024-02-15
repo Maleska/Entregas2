@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import kotlin.text.UStringsKt;
 
 public class DBHandler extends SQLiteOpenHelper {
     // creating a constant variables for our database.
@@ -96,6 +95,7 @@ private String resultado="";
         if (cursor.moveToFirst()){
             resultado = cursor.getString(1);
         }
+        cursor.close();
         return resultado;
     }
 }
