@@ -120,7 +120,7 @@ public class InicioActivity  extends AppCompatActivity {
                 makeText(mContext, formattedDate, LENGTH_SHORT).show();
             }
         });
-        validLicense();
+        //validLicense();
 
   /*      btnload.setOnClickListener(new View.OnClickListener() {
             @Override
