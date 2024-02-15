@@ -75,6 +75,7 @@ private String resultado="";
 
         // after adding all values we are passing
         // content values to our table.
+        db.execSQL("DELETE FROM " + TABLE_NAME +";");
         db.insert(TABLE_NAME, null, values);
 
         // at last we are closing our

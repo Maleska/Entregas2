@@ -117,7 +117,7 @@ public class InicioActivity  extends AppCompatActivity {
                 //mShowSelectedDateText.setText("Selected Date is : " + materialDatePicker.getHeaderText());
                 Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
                 calendar.setTimeInMillis(selection);
-                SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+                SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
                 String formattedDate  = format.format(calendar.getTime());
 
                 makeText(mContext, formattedDate, LENGTH_SHORT).show();
