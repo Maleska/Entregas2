@@ -75,11 +75,25 @@ private String resultado="";
         // after adding all values we are passing
         // content values to our table.
         db.execSQL("DELETE FROM " + TABLE_NAME +";");
+
+        createTable(db);
+
         db.insert(TABLE_NAME, null, values);
 
         // at last we are closing our
         // database after adding database.
         db.close();
+    }
+    public void createTable(SQLiteDatabase db){
+        String query = "CREATE TABLE " + TABLE_NAME + " ("
+                + ID_COL + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + IP_COL + " TEXT,"
+                + SERIVCESL_COL + " NUMERIC,"
+                + ACTIVE_COL + " NUMERIC)";
+
+        // at last we are calling a exec sql
+        // method to execute above sql query
+        db.execSQL(query);
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {

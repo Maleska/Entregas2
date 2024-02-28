@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -79,8 +80,6 @@ public class InicioActivity  extends AppCompatActivity {
         btnload = findViewById(R.id.btnLoad);
         ivLogout = findViewById(R.id.ivLogOut);
 
-
-
         queue = Volley.newRequestQueue(this);
         lv = findViewById(R.id.lv);
         //ArrayAdapter<String> arrayAdapter;
@@ -93,7 +92,7 @@ public class InicioActivity  extends AppCompatActivity {
 
         final MaterialDatePicker materialDatePicker = materialDateBuilder.build();
 
-        materialDateBuilder.setTitleText("Selecciona una fecha.");
+        materialDateBuilder.setTitleText("Favor de seleccionar una fecha.");
 
         mPickDateButton.setOnClickListener(
                 new View.OnClickListener() {
@@ -200,6 +199,7 @@ public class InicioActivity  extends AppCompatActivity {
 
                             } catch (JSONException e) {
                                 //Do something with error
+                                makeText(InicioActivity.this, "Fail to post the data : " + e.getMessage(), LENGTH_SHORT).show();
                             }
 
                             //post your result in LiveData
@@ -210,7 +210,7 @@ public class InicioActivity  extends AppCompatActivity {
                         @Override
                         public void onErrorResponse(VolleyError error){
                             // Do something when error occurred
-
+                            makeText(InicioActivity.this, "Fail to post the data : " + error.getMessage().toString(), LENGTH_SHORT).show();
                         }
                     }
             ){
@@ -319,7 +319,8 @@ public class InicioActivity  extends AppCompatActivity {
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    error.printStackTrace();
+                    makeText(mContext, error.getMessage().toString(), LENGTH_SHORT).show();
+                    //error.printStackTrace();
                     //TODO: handle failure
                 }
             });
@@ -467,12 +468,13 @@ public class InicioActivity  extends AppCompatActivity {
                         //
                         //Toast.makeText(mContext, "Key: "+key+" Value: "+value, Toast.LENGTH_LONG).show();
                     }
+                    if (TextUtils.isEmpty(codeSAP)){
+                      singout();
+                    }
                 }
             }
         });
     }
-
-
     /*public void ConsultarPedidos(){
 
         String url = "http://172.16.101.125:8088/Service1.svc/getListOV";
